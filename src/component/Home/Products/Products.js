@@ -8,9 +8,11 @@ const Products = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setProducts(data)
+                const limitedProduct =data.slice(0,6)
+                setProducts(limitedProduct)
             })
     }, [])
+    
     return (
         <div>
 

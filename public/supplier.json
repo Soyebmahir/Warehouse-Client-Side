@@ -1,0 +1,52 @@
+[
+    {
+      "address":"Dhaka,Bangladesh",
+      "phone":"0125482542",
+      "name":"Soyeb Mohammad"
+    },
+    {
+      "address":"Cumilla,Banfladesh",
+      "phone":"0123654896", 
+      "name":"Tanvir Raihan"
+    },
+    {
+      "address":"Khulna Bangla",
+      "phone":"01987456321",  
+      "name":"Foza Dalal"
+    },
+    {
+      "address":"Chattagram,Bangladesh",
+      "phone":"01547896542",  
+      "name":"Srijon Poddar"
+    },
+    {
+      "address":"Chattagram,Bangladesh",
+      "phone":"01236598745", 
+      "name":"Pranto Sarkar"
+    },
+    {
+      "address":"Barishal, Bangladesh",
+      "phone":"01987456321",  
+      "name":"Mahito"
+    },
+    {
+      "address":"Gaibandha",
+      "phone":"01987456321",  
+      "name":"Soyeb Mahir"
+    },
+    {
+      "address":"Khulna,Bangladesh",
+      "phone":"01987456321",  
+      "name":"David Aslam"
+    },
+    {
+      "address":"Mirpur Dhaka",
+      "phone":"01987456321",  
+      "name":"Miraj Kacchi"
+    },
+    {
+      "address":"Bagura,Bangladesh",
+      "phone":"01987456321",  
+      "name":"Mihran Yoko"
+    }
+]
