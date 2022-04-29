@@ -1,0 +1,102 @@
+[
+    {
+      "name": "Squat Rack",
+      "price": 10000,
+      "description":"Half rack is basically one half of a power rack. It does not take a lot of space (in comparison to a full rack), it’s usually cheaper, but you can’t do as many different exercises with it as you can with a full rack.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/Cap-Barbell-FM-8000F-Half-Rack.jpg",
+      
+      "quantity": 5,
+      "supplier":"Soyeb Mohammad"
+    },
+    {
+        "name": "Cable Crossover Machine",
+      "price": 10000,
+      "description":"You can usually find a good cable cross-over machine in your local gym. From my personal experience, a proper gym owns one or two of these machines. ",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/ARCHON-Wall-Mount-Cable-Crossover-Station.jpg",
+      
+      "quantity": 5,
+      "supplier":"Tanvir Raihan"
+    },
+    {
+        "name": "Power Tower",
+      "price": 10000,
+      "description":"Another machine that definitely must have caught everyone’s attention (mainly because of its size) is the power tower. This heavy duty stand consists mainly of a dip station, pull-up bar, back-rest and sometimes sit-up bar or push-up bars that can be located at the base.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/Livebest-Adjustable-Power-Tower.jpg",
+      
+      "quantity": 5,
+      "supplier":"Foza Dalal"
+    },
+    {
+        "name": "Adjustable Weight Bench",
+      "price": 10000,
+      "description":"Weight benches are used for a whole range of exercise, including bench press, flyes, abdominal workouts, etc. Also, some of them come with included steel bench frame, so you can use them for bench presses right away.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/FLYBIRD-Adjustable-Weight-Bench.jpg",
+      
+      "quantity": 5,
+      "supplier":"Srijon Poddar"
+    },
+    {
+        "name": "Hammer Strength Machine",
+      "price": 10000,
+      "description":"It is designed to copy natural moves of a human body, while at the same time uses the combination of one-sided movements and arcs to increase one’s strength.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2019/08/hammer-strength-machine.jpg",
+      
+      "quantity": 5,
+      "supplier":"Pranto Sarkar"
+    },
+    {
+        "name": "Chest Press Machine",
+      "price": 10000,
+      "description":"The machine works the same pectoral muscles as a bench press, although the design is a bit different. You are actually pushing in front of you two mechanical arms loaded with heavy weight plates.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/Iron-Company-SportsArt-Fitness-A977-Chest-Press-Machine.jpg",
+      
+      "quantity": 5,
+      "supplier":"Mahito"
+    },
+    {
+        "name": "Pec Deck Machine",
+      "price": 10000,
+      "description":"This particular machine is designed, similarly like chest press machine, to isolate chest muscles, specifically pectoral muscles. The machine is used in a seated position with your elbows at 90 degrees and the point is to use the two mechanical arms to bring them together in front of your face.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2019/08/GOPLUS-Multifunction-Home-Gym-System.jpg",
+      
+      "quantity": 5,
+      "supplier":"Soyeb Mahir"
+    },
+    {
+        "name": "Preacher Curl Bench",
+      "price": 10000,
+      "description":"Preacher curl benches can use either weight plates, or an included weight stack. But usually, weight stacks are included in commercial-grade equipment only.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/GOPLUS-Preacher-Curl-Weight-Bench.jpg",
+      
+      "quantity": 5,
+      "supplier":"David Aslam"
+    },
+    {
+        "name": "Lat Pulldown Machine",
+      "price": 10000,
+      "description":"These machines are especially designed to train your back and chest by pulling down a barbell via a pulley system. They are available either with included weight stack or without it.",
+     
+      "img": "https://garagegympro.com/wp-content/uploads/2021/09/XMark-Fitness-Lat-Pulldown-Machine.jpg",
+      
+      "quantity": 5,
+      "supplier":"Miraj Kacchi"
+    },
+    {
+        "name": "Roman Chair",
+      "price": 10000,
+      "description":"Our list of gym equipment names continues with Roman chairs. These mechanical chairs are designed to provide workout for lower back and abdomen.",
+     
+      "img": "https://image.made-in-china.com/202f0j00sbqgwYKZlurj/Exercise-Machine-Strength-Fitness-Equipment-Life-Fitness-Gym-Bench-Adjustable-Roman-Chair.jpg",
+      
+      "quantity": 5,
+      "supplier":"Mihran Yoko"
+    }
+]
