@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Product = ({product}) => {
-    const  {name,  price, img, description,quantity,supplier}=product
+    const  {name,_id,  price, img, description,quantity,supplier}=product
     const navigate = useNavigate()
 
-    const handleServiceDetails = (id) => {
-        navigate(`/home/${id}`)
+    const handleStockUpdate = (id) => {
+        navigate(`/inventory/${id}`)
 
     }
     return (
@@ -21,7 +21,7 @@ const Product = ({product}) => {
                 <p className=""><small>{description}</small></p>
             </div>
             <div className="card-footer d-block text-center">
-                <button onClick={() => handleServiceDetails()} className='btn btn-info '> Checkout</button>
+                <button onClick={() => handleStockUpdate(_id)} className='btn btn-info '> Stock Update</button>
             </div>
         </div>
     </div>
