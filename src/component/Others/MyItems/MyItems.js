@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
@@ -7,35 +8,41 @@ const MyItems = () => {
     const [user] = useAuthState(auth)
     const [myProducts, setMyProduct] = useState([]);
     useEffect(() => {
-        const email = user?.email
-        const url = `http://localhost:5000/ordered?email=${email}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setMyProduct(data))
-        // const getProducts =async()=>{
-        //     const email =user.email
-        //     const url =`http://localhost:5000/ordered`
-        //     const {data}= await axi
 
-        // }
+        const myAddedProducts = async () => {
+            const email = user?.email
+            const url = `http://localhost:5000/ordered?email=${email}`
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+            setMyProduct(data)
+        }
+        myAddedProducts();
+
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => setMyProduct(data))
+
 
     }, [user])
-    const handleUserDelete = id =>{
+    const handleUserDelete = id => {
         const allow = window.confirm('You dare to delete !');
-        if(allow){
+        if (allow) {
             console.log('deleting user with id, ', id);
             const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data =>{
-                if(data.deletedCount > 0){
-                    console.log('deleted');
-                    const remaining = myProducts.filter(user => user._id !== id);
-                    setMyProduct(remaining);
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log('deleted');
+                        const remaining = myProducts.filter(user => user._id !== id);
+                        setMyProduct(remaining);
+                    }
+                })
         }
     }
     return (

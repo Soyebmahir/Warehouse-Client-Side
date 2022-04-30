@@ -8,6 +8,7 @@ import auth from '../../../firebase.init';
 
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Others/Loading/Loading';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -34,14 +35,16 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    if (user) {
-        navigate(from, { replace: true })
-    }
-    const handleFormSubmit = (event) => {
+    
+    const handleFormSubmit = async(event) => {
         event.preventDefault()
         const email = emailRef.current.value
         const password = passwordRef.current.value
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data}=await axios.post('http://localhost:5000/getToken',{email});
+        console.log(data);
+        localStorage.setItem('accessToken',data.accessToken)
+        navigate(from, { replace: true })
     }
 
 
@@ -80,7 +83,7 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>New to Captured Moments ? <Link to={"/register"} className='text-danger pe-auto text-decoration-none'>Register First</Link ></p>
+            <p>New to workout Gears ? <Link to={"/register"} className='text-danger pe-auto text-decoration-none'>Register First</Link ></p>
             <p>Forget Password ? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <ToastContainer></ToastContainer>
             <SocialLogin></SocialLogin>

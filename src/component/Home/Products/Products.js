@@ -3,12 +3,12 @@ import Product from '../Product/Product';
 
 const Products = () => {
     const [products, setProducts] = useState([])
-    console.log(products);
+    // console.log(products);
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 const limitedProduct =data.slice(0,6)
                 setProducts(limitedProduct)
             })
