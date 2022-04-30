@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import Product from '../Product/Product';
 
-const Products = () => {
+import ProductAgain from '../ProductAgain/ProductAgain';
+
+const ManageInventory = () => {
     const [products, setProducts] = useState([])
-    console.log(products);
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                const limitedProduct =data.slice(0,6)
-                setProducts(limitedProduct)
+                // console.log(data);
+                
+                setProducts(data)
             })
     }, [])
-    
     return (
         <div>
 
@@ -22,10 +21,10 @@ const Products = () => {
 
                 <div className=' row row-cols-1 row-cols-md-2 row-cols-lg-3'>
                 {
-                    products.map((product) => <Product
+                    products.map((product) => <ProductAgain
                         key={product._id}
-                        
-                        product={product}></Product>)
+                        // products={products}
+                        product={product}></ProductAgain>)
                 }
             </div>
 
@@ -34,4 +33,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default ManageInventory;

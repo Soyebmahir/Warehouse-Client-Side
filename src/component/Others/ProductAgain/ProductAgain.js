@@ -1,10 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Product = ({product}) => {
-    const  {name,_id,  price, img, description,quantity,supplier}=product
-    
-    
+const ProductAgain = ({product}) => {
+    const {name,_id,  price, img, description,quantity,supplier}=product
     const navigate = useNavigate()
 
     const handleStockUpdate = (id) => {
@@ -33,4 +31,4 @@ const Product = ({product}) => {
     );
 };
 
-export default Product;
+export default ProductAgain;

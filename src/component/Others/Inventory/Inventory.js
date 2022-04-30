@@ -16,7 +16,7 @@ const Inventory = () => {
                 setProductInfo(data)
             })
 
-    }, [])
+    }, [id])
     const handleProductQuantity = () => {
         let { quantity, name, price, description, supplier, img } = productInfo;
         // console.log(quantity);
@@ -39,6 +39,7 @@ const Inventory = () => {
                     window.location.reload(false);
 
                 })
+                
 
 
             // console.log(updatequantity);
@@ -52,7 +53,7 @@ const Inventory = () => {
         let { quantity, name, price, description, supplier, img } = productInfo;
        
         const newAddedQuantity =event.target.number.value
-        console.log(newAddedQuantity);
+        // console.log(newAddedQuantity);
         if(!newAddedQuantity){
             alert('Please Inter Valid Numebr')
         }else{
@@ -71,7 +72,7 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log('success', data);
+                    // console.log('success', data);
                     alert('Added successfully!!!');
                    
             window.location.reload(false);
