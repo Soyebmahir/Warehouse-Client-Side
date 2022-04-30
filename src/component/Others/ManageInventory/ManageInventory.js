@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import ProductAgain from '../ProductAgain/ProductAgain';
 
@@ -45,6 +46,9 @@ const ManageInventory = () => {
                         // products={products}
                         product={product}></ProductAgain>)
                 }
+            </div>
+            <div className="card-footer d-block text-center">
+                <button className='btn btn-info color-light mx-auto'><Link to='/addItem' className='text-light text-center d-block text-decoration-none'>Add New Item</Link></button>
             </div>
 
             </div>

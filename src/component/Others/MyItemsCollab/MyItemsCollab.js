@@ -1,15 +1,7 @@
 import React from 'react';
-import {  useNavigate } from 'react-router-dom';
 
-const ProductAgain = ({ product, handleUserDelete }) => {
-    const { name, _id, price, img, description, quantity, supplier } = product
-    const navigate = useNavigate()
-
-    const handleStockUpdate = (id) => {
-        navigate(`/inventory/${id}`)
-
-    }
-
+const MyItemsCollab = ({myproduct,handleUserDelete}) => {
+    const { name, _id, price, img, description, quantity, supplier } = myproduct
     return (
         <div className='col gy-4 gx-2 shadow rounded p-3 mb-2 bg-body'>
             <div className="card shadow rounded mb-2 bg-body">
@@ -22,7 +14,7 @@ const ProductAgain = ({ product, handleUserDelete }) => {
                     <p className=""><small>{description}</small></p>
                 </div>
                 <div className="card-footer d-flex justify-content-between">
-                    <button onClick={() => handleStockUpdate(_id)} className='btn btn-info mr-4'> Stock Update</button>
+                    
 
                     <button onClick={() => handleUserDelete(_id)} className='btn btn-info '> Delete Item</button>
 
@@ -33,4 +25,4 @@ const ProductAgain = ({ product, handleUserDelete }) => {
     );
 };
 
-export default ProductAgain;
+export default MyItemsCollab;

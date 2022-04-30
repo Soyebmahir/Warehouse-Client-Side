@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 const Product = ({product}) => {
     const  {name,_id,  price, img, description,quantity,supplier}=product
+    console.log(product);
     
     
     const navigate = useNavigate()
 
     const handleStockUpdate = (id) => {
-        navigate(`/inventory/${id}`)
+        navigate(`/inventory/${id}`);
 
     }
     return (
