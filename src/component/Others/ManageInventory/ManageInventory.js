@@ -13,6 +13,24 @@ const ManageInventory = () => {
                 setProducts(data)
             })
     }, [])
+    const handleUserDelete = id =>{
+        const allow = window.confirm('You dare to delete !');
+        if(allow){
+            console.log('deleting user with id, ', id);
+            const url = `http://localhost:5000/product/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.deletedCount > 0){
+                    console.log('deleted');
+                    const remaining = products.filter(user => user._id !== id);
+                    setProducts(remaining);
+                }
+            })
+        }
+    }
     return (
         <div>
 
@@ -23,6 +41,7 @@ const ManageInventory = () => {
                 {
                     products.map((product) => <ProductAgain
                         key={product._id}
+                        handleUserDelete={handleUserDelete}
                         // products={products}
                         product={product}></ProductAgain>)
                 }

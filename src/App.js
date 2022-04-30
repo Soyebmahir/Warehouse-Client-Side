@@ -6,6 +6,7 @@ import Register from './component/Authentication/Register/Register';
 import Footer from './component/Home/Footer/Footer';
 import Header from './component/Home/Header/Header';
 import Home from './component/Home/Home/Home';
+import AddNewItem from './component/Others/AddNewItem/AddNewItem';
 import Blogs from './component/Others/Blogs/Blogs';
 import Inventory from './component/Others/Inventory/Inventory';
 import ManageInventory from './component/Others/ManageInventory/ManageInventory';
@@ -29,6 +30,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/manage' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/addItem' element={<AddNewItem></AddNewItem>}></Route>
         
 
       </Routes>

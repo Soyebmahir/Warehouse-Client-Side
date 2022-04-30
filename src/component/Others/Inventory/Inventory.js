@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Inventory = () => {
     const [productInfo, setProductInfo] = useState({})
@@ -34,33 +34,37 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    // console.log('success', data);
-                    alert('Delivered successfully!!!');
-                    window.location.reload(false);
+                    console.log('success', data);
+                    // setProductInfo(data)
 
+                    // window.location.reload(false);
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            // console.log(data);
+                            setProductInfo(data)
+                        })
                 })
-                
 
-
-            // console.log(updatequantity);
+            // alert('Delivered successfully!!!');
         } else {
             alert('Stock Out')
         }
     }
 
-    const handleAddQuantity =(event)=>{
+    const handleAddQuantity = (event) => {
         event.preventDefault()
         let { quantity, name, price, description, supplier, img } = productInfo;
-       
-        const newAddedQuantity =event.target.number.value
+
+        const newAddedQuantity = event.target.number.value
         // console.log(newAddedQuantity);
-        if(!newAddedQuantity){
+        if (!newAddedQuantity) {
             alert('Please Inter Valid Numebr')
-        }else{
-            quantity=parseInt(quantity)+parseInt(newAddedQuantity);
+        } else {
+            quantity = parseInt(quantity) + parseInt(newAddedQuantity);
             // quantity=parseInt(updatedquantity)
             console.log(quantity);
-    
+
             const updateProductinfo = { quantity, name, price, description, supplier, img };
             const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
@@ -72,15 +76,21 @@ const Inventory = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    // console.log('success', data);
-                    alert('Added successfully!!!');
-                   
-            window.location.reload(false);
+                    console.log('success', data);
+                    // alert('Added successfully!!!');
+                    fetch(url)
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log(data);
+                        setProductInfo(data)
+                        event.target.reset()
+                    })
+                    // window.location.reload(false);
                 })
         }
-       
-       
-     
+
+
+
     }
 
     return (
@@ -103,11 +113,15 @@ const Inventory = () => {
             <div className="card-footer d-block text-center">
                 <button className='btn btn-info ' onClick={handleProductQuantity}> Deliver</button>
                 <form onSubmit={handleAddQuantity} className='mt-4'>
-                    <input className='' style={{height: "40px"}} type='number' name="number" placeholder='re-stock'></input>
+                    <input className='' style={{ height: "40px" }} type='number' name="number" placeholder='re-stock'></input>
                     <input className='btn btn-success' type="submit" value="Add Quantity"></input>
                 </form>
 
             </div>
+            <div className="card-footer d-block text-center">
+                <button className='btn btn-info color-light mx-auto'><Link to='/manage' className='text-light text-center d-block text-decoration-none'>Manage Inventories</Link></button>
+            </div>
+            
 
         </div>
 
