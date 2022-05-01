@@ -17,6 +17,8 @@ const Inventory = () => {
             })
 
     }, [id])
+
+    
     const handleProductQuantity = () => {
         let { quantity, name, price, description, supplier, img } = productInfo;
         // console.log(quantity);
