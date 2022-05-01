@@ -18,7 +18,7 @@ const AddNewItem = () => {
         const product ={name,price,email,quantity,img,description,supplier}
         console.log(product);
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://hidden-reef-02087.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

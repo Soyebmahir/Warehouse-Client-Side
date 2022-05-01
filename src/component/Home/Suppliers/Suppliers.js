@@ -4,7 +4,7 @@ import Supplier from '../Supplier/Supplier';
 const Suppliers = () => {
     const [infos,setInfo]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/suppliers')
+        fetch('https://hidden-reef-02087.herokuapp.com/suppliers')
         .then(res=>res.json())
         .then(data=>setInfo(data))
     },[])

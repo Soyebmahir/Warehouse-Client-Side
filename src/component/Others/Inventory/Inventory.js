@@ -8,7 +8,7 @@ const Inventory = () => {
     const { id } = useParams();
     // console.log(id);
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`
+        const url = `https://hidden-reef-02087.herokuapp.com/product/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -24,7 +24,7 @@ const Inventory = () => {
             quantity = quantity - 1;
             const updateProductinfo = { quantity, name, price, description, supplier, img };
 
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://hidden-reef-02087.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -66,7 +66,7 @@ const Inventory = () => {
             console.log(quantity);
 
             const updateProductinfo = { quantity, name, price, description, supplier, img };
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://hidden-reef-02087.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

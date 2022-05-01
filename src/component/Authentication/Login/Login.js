@@ -41,7 +41,7 @@ const Login = () => {
         const email = emailRef.current.value
         const password = passwordRef.current.value
         await signInWithEmailAndPassword(email, password);
-        const {data}=await axios.post('http://localhost:5000/getToken',{email});
+        const {data}=await axios.post('https://hidden-reef-02087.herokuapp.com/getToken',{email});
         console.log(data);
         localStorage.setItem('accessToken',data.accessToken)
         navigate(from, { replace: true })

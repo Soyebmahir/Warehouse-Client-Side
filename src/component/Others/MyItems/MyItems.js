@@ -11,7 +11,7 @@ const MyItems = () => {
 
         const myAddedProducts = async () => {
             const email = user?.email
-            const url = `http://localhost:5000/ordered?email=${email}`
+            const url = `https://hidden-reef-02087.herokuapp.com/ordered?email=${email}`
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +31,7 @@ const MyItems = () => {
         const allow = window.confirm('You dare to delete !');
         if (allow) {
             console.log('deleting user with id, ', id);
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://hidden-reef-02087.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
