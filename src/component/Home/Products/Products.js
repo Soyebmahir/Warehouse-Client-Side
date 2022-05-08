@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from 'react';
+// import Loading from '../../Others/Loading/Loading';
 import Product from '../Product/Product';
 
 const Products = () => {
     const [products, setProducts] = useState([])
+   
+    
     // console.log(products);
+    
     useEffect(() => {
+       
         fetch('https://hidden-reef-02087.herokuapp.com/product')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
                 const limitedProduct =data.slice(0,6)
                 setProducts(limitedProduct)
+               
             })
     }, [])
+   
+   
     
     return (
         <div>
