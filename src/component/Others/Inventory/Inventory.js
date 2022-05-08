@@ -49,7 +49,8 @@ const Inventory = () => {
                 })
 
             // alert('Delivered successfully!!!');
-        } else {
+        } 
+        else {
             alert('Stock Out')
         }
     }
